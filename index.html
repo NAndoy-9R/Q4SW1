@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Methods in JavaScript</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f5f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-top: 20px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            overflow-x: auto;
+            transition: background 0.3s ease;
+        }
+
+        .code-block:hover {
+            background: #34495e;
+        }
+
+        .explanation {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .explanation strong {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .result {
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.2em;
+            color: #16a085;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .result:hover {
+            background-color: #1abc9c;
+            transform: scale(1.05);
+        }
+
+        .section {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .result {
+                font-size: 1em;
+            }
+        }
+
+        /* Adding effects for hover on the explanation */
+        .explanation:hover {
+            color: #3498db;
+            transition: color 0.3s ease;
+        }
+
+        .explanation strong {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Math Methods in JavaScript</h1>
+    <h2>JS Math Method - Easy </h2>
+    
+    <div class="container">
+        <div class="section">
+            <h3>Determine the value of roundedPrice</h3>
+            <p class="code-block">var sandwichPrice = 125.80;<br>var roundedPrice = Math.round(sandwichPrice);</p>
+            <p class="explanation"><strong>Explanation:</strong> Math.round rounds the number to the nearest integer. <br>
+            sandwichPrice = 125.80. Rounding 125.80 gives <strong>126</strong>.</p>
+            <div class="result">Return Value: <strong>126</strong></div>
+        </div>
+
+        <div class="section">
+            <h3>Determine the value of standardSandwiches</h3>
+            <p class="code-block">var miniSandwiches = 81;<br>var standardSandwiches = Math.sqrt(miniSandwiches);</p>
+            <p class="explanation"><strong>Explanation:</strong> Math.sqrt calculates the square root of a number. <br>
+            miniSandwiches = 81. The square root of 81 is <strong>9</strong>.</p>
+            <div class="result">Return Value: <strong>9</strong></div>
+        </div>
+
+        <div class="section">
+            <h3>Determine the value of absoluteDifference</h3>
+            <p class="code-block">var priceDifference = -15.50;<br>var absoluteDifference = Math.abs(priceDifference);</p>
+            <p class="explanation"><strong>Explanation:</strong> Math.abs returns the absolute value of the number (removes the negative sign). <br>
+            priceDifference = -15.50, so the absolute value is <strong>15.50</strong>.</p>
+            <div class="result">Return Value: <strong>15.50</strong></div>
+        </div>
+
+        <div class="section">
+            <h3>Determine the value of totalCost</h3>
+            <p class="code-block">var basePrice = 150;<br>var totalCost = basePrice ** 2;</p>
+            <p class="explanation"><strong>Explanation:</strong> The '**' operator is used for exponentiation in JavaScript. <br>
+            basePrice = 150. 150 raised to the power of 2 (150 ** 2) equals <strong>22500</strong>.</p>
+            <div class="result">Return Value: <strong>22500</strong></div>
+        </div>
+
+        <div class="section">
+            <h3>Determine the value of maxSales</h3>
+            <p class="code-block">var dailySales = [2500, 3200, 2800, 3500];<br>var maxSales = Math.max(...dailySales);</p>
+            <p class="explanation"><strong>Explanation:</strong> Math.max returns the largest number in a set of arguments. The spread operator (...) is used to pass the array elements as individual arguments. <br>
+            The maximum sales value from the array [2500, 3200, 2800, 3500] is <strong>3500</strong>.</p>
+            <div class="result">Return Value: <strong>3500</strong></div>
+        </div>
+
+        <div class="section">
+            <h3>Determine the value of roundedPrice after a discount</h3>
+            <p class="code-block">var sandwichPrice = 135.75;<br>var discountedPrice = sandwichPrice - (sandwichPrice * 0.15);<br>var roundedPrice = Math.round(discountedPrice);</p>
+            <p class="explanation"><strong>Explanation:</strong> First, we calculate the discounted price. A 15% discount is applied to the original price (135.75 * 0.15 = 20.3625). <br>
+            Subtracting the discount from the original price gives: 135.75 - 20.3625 = 115.3875. Rounding this to the nearest integer results in <strong>115</strong>.</p>
+            <div class="result">Return Value: <strong>115</strong></div>
+        </div>
+
+        <div class="section">
+            <h3>Determine the value of familyPack</h3>
+            <p class="code-block">var miniSandwiches = 121;<br>var standardSandwiches = Math.sqrt(miniSandwiches);<br>var familyPack = Math.pow(standardSandwiches, 2);</p>
+            <p class="explanation"><strong>Explanation:</strong> First, the square root of miniSandwiches (121) is calculated, which is <strong>11</strong>. <br>
+            Then, Math.pow raises the number 11 to the power of 2, which results in <strong>121</strong>.</p>
+            <div class="result">Return Value: <strong>121</strong></div>
+        </div>
+
+        <div class="section">
+            <h3>Determine the value of finalAdjustment</h3>
+            <p class="code-block">var priceDifference = -22.50;<br>var absoluteDifference = Math.abs(priceDifference);<br>var finalAdjustment = absoluteDifference * 2;</p>
+            <p class="explanation"><strong>Explanation:</strong> Math.abs returns the absolute value of priceDifference, which is <strong>22.50</strong>. <br>
+            Doubling this value gives <strong>45.00</strong>.</p>
+            <div class="result">Return Value: <strong>45.00</strong></div>
+        </div>
+
+        <div class="section">
+            <h3>Determine the value of roundedTotal</h3>
+            <p class="code-block">var basePrice = 160;<br>var taxRate = 0.12;<br>var totalPrice = basePrice + (basePrice * taxRate);<br>var roundedTotal = Math.round(totalPrice * 100) / 100;</p>
+            <p class="explanation"><strong>Explanation:</strong> First, calculate the total price by adding the tax: 160 + (160 * 0.12) = 160 + 19.2 = 179.2. <br>
+            Then, rounding 179.2 to two decimal places gives <strong>179.2</strong>.</p>
+            <div class="result">Return Value: <strong>179.2</strong></div>
+        </div>
+
+        <div class="section">
+            <h3>Determine the value of averageSales</h3>
+            <p class="code-block">var dailySales = [2750, 3100, 2950, 3300, 3050];<br>var minSales = Math.min(...dailySales);<br>var maxSales = Math.max(...dailySales);<br>var averageSales = (minSales + maxSales) / 2;</p>
+            <p class="explanation"><strong>Explanation:</strong> First, Math.min and Math.max return the minimum (2750) and maximum (3300) values from the array. <br>
+            The average sales value is then calculated by averaging these two numbers: (2750 + 3300) / 2 = 6050 / 2 = <strong>3025</strong>.</p>
+            <div class="result">Return Value: <strong>3025</strong></div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Math Methods in JavaScript - Designed for Learning</p>
+    </footer>
+
+</body>
+</html>
